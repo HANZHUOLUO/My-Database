@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AIS20170527144859" Class="LinqToSqlDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=KINGDEE;Initial Catalog=AIS20170527144859;Persist Security Info=True;User ID=sa" SettingsObjectName="MyDemo.Properties.Settings" SettingsPropertyName="AIS20170527144859ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.t_Department" Member="t_Department">
+    <Type Name="t_Department">
+      <Column Name="FItemID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FBrNO" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="FManager" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FPhone" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="FFax" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="FNote" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="FNumber" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="FName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="FParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FDProperty" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FDStock" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FDeleted" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="FShortNumber" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="FAcctID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FCostAccountType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FModifyTime" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="FCalID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FPlanArea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FOtherARAcctID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FOtherAPAcctID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FPreARAcctID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FPreAPAcctID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FIsCreditMgr" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FIsVDept" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

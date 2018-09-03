@@ -59,6 +59,7 @@ namespace MyDemo
             dataGridView1.AllowUserToAddRows = false;//禁止添加行
             dataGridView1.AllowUserToDeleteRows = false;//禁止删除行
             dataGridView1.ReadOnly = true;//控件中的数据为只读
+            ///asda
         }
     }
 }

@@ -73,6 +73,10 @@ namespace Interfence
             interface2 interface2 = program;
             Console.WriteLine(interface1.Add());
             Console.WriteLine(interface2.Add());
+            Sealed se = new Sealed();
+            se.Idse1 = "001";
+            se.Namese1 = "tm";
+            se.Method();
             Console.ReadLine();
         }
     }

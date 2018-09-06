@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Interfence
 {
-    class Program: ICter, Ipeople,ITeacher,IStudent
+    class Program: ICter, Ipeople,ITeacher,IStudent,interface1,interface2
     {
         string id = "";
         string name = "";
@@ -35,6 +35,18 @@ namespace Interfence
             Console.WriteLine(names + " "+ sexs + " 学生");
         }
 
+        int interface1.Add()
+        {
+            int x = 1;
+            int y = 2;
+            return x + y;
+        }
+        int interface2.Add()
+        {
+            int x = 2;
+            int y = 3;
+            return x + y;
+        }
         static void Main(string[] args)
         {
             DriveClass drive = new DriveClass();//实例化派生类
@@ -57,7 +69,10 @@ namespace Interfence
             student.Names = "C#";
             student.Sexs = "男";
             student.Study();
-
+            interface1 interface1 = program;
+            interface2 interface2 = program;
+            Console.WriteLine(interface1.Add());
+            Console.WriteLine(interface2.Add());
             Console.ReadLine();
         }
     }

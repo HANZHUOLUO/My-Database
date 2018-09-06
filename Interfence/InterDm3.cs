@@ -33,7 +33,7 @@ namespace Interfence
 
             void Study();
         }
-
+        
 
     
 }

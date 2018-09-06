@@ -155,6 +155,7 @@ namespace MyDemo
             linq.SubmitChanges();
             MessageBox.Show("删除成功！","提示");
             SelectInfo();
+             
         }
     }
 }

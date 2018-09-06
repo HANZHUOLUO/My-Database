@@ -77,6 +77,24 @@ namespace Interfence
             se.Idse1 = "001";
             se.Namese1 = "tm";
             se.Method();
+            ///Demo1
+            DemoOne demo = new DemoOne();
+            demo.A = 7;
+            demo.B = 8;
+            Console.WriteLine("面积是："+ demo.Mj());
+            //Demo2
+            Demo2M demo21 = new Demo2M();
+            Demo2Class demo2 = demo21;
+            demo21.A = 5;
+            demo21.B = 3.14;
+            Console.WriteLine("圆的面积是："+demo21.Mj());
+            //Demo3
+            Demo3Class demo3 = new Demo3Class();
+            Console.WriteLine("请输入用户名：");
+           demo3.Name= Console.ReadLine();
+            Console.WriteLine("请输入密码：");
+            demo3.Psd= Console.ReadLine();
+            Console.WriteLine("用户名："+demo3.Name+"\t"+"密码："+demo3.Psd);
             Console.ReadLine();
         }
     }

@@ -22,7 +22,7 @@ namespace MyDemo
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            Application.Run(new AddGridView());
+            Application.Run(new PartialDeno());
         }
     }
 }

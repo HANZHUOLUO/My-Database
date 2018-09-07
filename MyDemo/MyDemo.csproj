@@ -78,6 +78,12 @@
     <Compile Include="DatacontrolReprt.Designer.cs">
       <DependentUpon>DatacontrolReprt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Family.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Family.Designer.cs">
+      <DependentUpon>Family.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,12 @@
     </Compile>
     <Compile Include="GrVIEW.Designer.cs">
       <DependentUpon>GrVIEW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IEnumberableDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IEnumberableDemo.Designer.cs">
+      <DependentUpon>IEnumberableDemo.cs</DependentUpon>
     </Compile>
     <Compile Include="Linq.cs">
       <SubType>Form</SubType>
@@ -118,6 +130,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Mydatabase.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Partial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Partial.Designer.cs">
+      <DependentUpon>Partial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartialDeno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartialDeno.Designer.cs">
+      <DependentUpon>PartialDeno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlHelp.cs" />
@@ -126,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DatacontrolReprt.resx">
       <DependentUpon>DatacontrolReprt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Family.resx">
+      <DependentUpon>Family.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -136,11 +163,20 @@
     <EmbeddedResource Include="GrVIEW.resx">
       <DependentUpon>GrVIEW.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IEnumberableDemo.resx">
+      <DependentUpon>IEnumberableDemo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Linq.resx">
       <DependentUpon>Linq.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LinqAdd.resx">
       <DependentUpon>LinqAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Partial.resx">
+      <DependentUpon>Partial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartialDeno.resx">
+      <DependentUpon>PartialDeno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

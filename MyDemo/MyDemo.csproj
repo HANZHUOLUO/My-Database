@@ -84,6 +84,12 @@
     <Compile Include="Family.Designer.cs">
       <DependentUpon>Family.cs</DependentUpon>
     </Compile>
+    <Compile Include="FileIO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileIO.Designer.cs">
+      <DependentUpon>FileIO.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Family.resx">
       <DependentUpon>Family.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileIO.resx">
+      <DependentUpon>FileIO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

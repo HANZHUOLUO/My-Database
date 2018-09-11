@@ -95,8 +95,43 @@ namespace Interfence
             Console.WriteLine("请输入密码：");
             demo3.Psd= Console.ReadLine();
             Console.WriteLine("用户名："+demo3.Name+"\t"+"密码："+demo3.Psd);
-            Console.ReadLine();
+
+            IGenericlnterface<System.ComponentModel.IListSource> Factoy = new Factory<System.Data.DataTable, System.ComponentModel.IListSource>();
+            Console.WriteLine(Factoy.Createlnstance().GetType().ToString());
+            int i = Finder.Find<int>(new int[] { 1,2,3,4,5,6,7,8,9},6);
+            Console.WriteLine("6 在数组中的位置："+i.ToString());
+            ///泛型数组
+            List<int> MyList = new List<int>();
+            for (int j=0;j<10;j++)
+            {
+                MyList.Add(j);
+            }
+            foreach (int a in MyList)
+            {
+                Console.WriteLine(a);
+            }
+            Fclass1<int> fclass1 = new Fclass1<int>();
+            Fclass2<int> fclass2 = new Fclass2<int>();
+             Console.ReadLine();
         }
+    }
+
+
+    class Fclass1<T>
+    {
+        public Fclass1()
+        {
+            Console.WriteLine("第一个泛型方法");
+        }
+    }
+    class Fclass2<T> : Fclass1<T>
+    {
+        public Fclass2()
+        {
+            Console.WriteLine("第二个泛型方法");
+
+        }
+
     }
 }
 

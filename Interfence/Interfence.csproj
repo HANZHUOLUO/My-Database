@@ -61,6 +61,8 @@
     <Compile Include="Demo2Class.cs" />
     <Compile Include="Demo3Class.cs" />
     <Compile Include="DemoClass.cs" />
+    <Compile Include="Factory.cs" />
+    <Compile Include="Finder.cs" />
     <Compile Include="InterDm3.cs" />
     <Compile Include="Interfence.cs" />
     <Compile Include="MyClass.cs" />

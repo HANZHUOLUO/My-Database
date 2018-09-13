@@ -67,6 +67,12 @@
     <Compile Include="AddGridView.Designer.cs">
       <DependentUpon>AddGridView.cs</DependentUpon>
     </Compile>
+    <Compile Include="BlGetFileSysteminfos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlGetFileSysteminfos.Designer.cs">
+      <DependentUpon>BlGetFileSysteminfos.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataClasses1.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -159,6 +165,9 @@
     <Compile Include="SqlHelp.cs" />
     <EmbeddedResource Include="AddGridView.resx">
       <DependentUpon>AddGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BlGetFileSysteminfos.resx">
+      <DependentUpon>BlGetFileSysteminfos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DatacontrolReprt.resx">
       <DependentUpon>DatacontrolReprt.cs</DependentUpon>

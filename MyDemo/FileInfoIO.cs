@@ -87,7 +87,7 @@ namespace MyDemo
         {
             if (openFileDialog1.ShowDialog()==DialogResult.OK)//浏览文件控件
             {
-                textBox3.Text = openFileDialog1.FileName;
+                textBox3.Text = openFileDialog1.FileName; ///获取文件路径
                 FileInfo info = new FileInfo(textBox3.Text);
                 string strCTime, strLATime, strLWTime, strName, strFName, strDName, strISRead;
                 long lgLength;
@@ -124,6 +124,23 @@ namespace MyDemo
                 {
                     MessageBox.Show("文件夹不存在！");
                 }
+            }
+        }
+        /// <summary>
+        /// 永久性删除文件夹
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text==string.Empty)
+            {
+                MessageBox.Show("文件夹名不能为空！");
+            }
+            else
+            {
+                DirectoryInfo directory1 = new DirectoryInfo(textBox2.Text);
+                directory1.Delete(true);
             }
         }
     }

@@ -224,5 +224,22 @@ namespace MyDemo
                 }
             }
         }
+        /// <summary>
+        /// 删除文件夹
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text==string.Empty)
+            {
+                MessageBox.Show("文件夹名不能为空！");
+            }
+            else
+            {
+                Directory.Delete(textBox2.Text.Trim(),true);
+            }
+
+        }
     }
 }

@@ -40,6 +40,9 @@ namespace MyDemo
                 else
                 {
                     fileInfo.Create();
+                    //fileInfo.CopyTo();
+                    //fileInfo.MoveTo();
+                    //fileInfo.Delete();
                 }
 
             }
@@ -69,10 +72,59 @@ namespace MyDemo
                 else
                 {
                     directoryInfo.Create();
+                    //directoryInfo.
                 }
 
             }
 
+        }
+        /// <summary>
+        /// 打开文件目录事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog()==DialogResult.OK)//浏览文件控件
+            {
+                textBox3.Text = openFileDialog1.FileName;
+                FileInfo info = new FileInfo(textBox3.Text);
+                string strCTime, strLATime, strLWTime, strName, strFName, strDName, strISRead;
+                long lgLength;
+                strCTime = info.CreationTime.ToShortDateString();///获取创建时间
+                strLATime = info.LastAccessTime.ToShortDateString();///获取上次访问时间
+                strLWTime = info.LastWriteTime.ToShortDateString();///获取上次写入时间
+                strName = info.Name;//获取文件名称
+                strFName = info.FullName;//获取文件完整目录
+                strDName = info.DirectoryName;//获取文件完整路径
+                strISRead = info.IsReadOnly.ToString();//获取文件只读属性
+                lgLength = info.Length;//获取文件长度
+                MessageBox.Show("文件信息：\n创建时间："+strCTime+"，上次访问时间："+strLATime+",上次写入时间："+strLWTime+",文件名称："+strName+",\n完整目录："+strFName+",\n完整路径："+strDName+"\n是否只读"+strISRead+",文件长度："+lgLength);
+            }
+        }
+        /// <summary>
+        /// 移动文件夹
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text == string.Empty)
+            {
+                MessageBox.Show("文件夹名不能为空");
+            }
+            else
+            {
+                DirectoryInfo directory = new DirectoryInfo(textBox2.Text);
+                if (directory.Exists)
+                {
+                    directory.MoveTo(textBox4.Text);
+                }
+                else
+                {
+                    MessageBox.Show("文件夹不存在！");
+                }
+            }
         }
     }
 }

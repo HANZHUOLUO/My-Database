@@ -82,6 +82,146 @@ namespace MyDemo
             else
             {
                 File.Copy(textBox1.Text,textBox3.Text);
+                MessageBox.Show("文件已复制！");
+            }
+        }
+        /// <summary>
+        /// 移动文件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == string.Empty && textBox3.Text == string.Empty)
+            {
+                MessageBox.Show("文件名不能为空！");
+            }
+            else
+            {
+
+                File.Move(textBox1.Text,textBox3.Text);
+                MessageBox.Show("文件移动成功！");
+            }
+
+        }
+        /// <summary>
+        /// 删除文件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == string.Empty && textBox3.Text == string.Empty)
+            {
+                MessageBox.Show("文件名不能为空！");
+            }
+            else
+            {
+                File.Delete(textBox1.Text);
+                MessageBox.Show("文件删除成功！");
+            }
+        }
+        /// <summary>
+        /// 打开文件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text==string.Empty && textBox3.Text==string.Empty)
+            {
+                MessageBox.Show("文件名不能为空！");
+            }
+            else
+            {
+               File.Open(textBox1.Text,FileMode.Open);
+                MessageBox.Show("文件已打开！");
+            }
+        }
+        /// <summary>
+        /// 创建一个文件用于写入UTF-8格式的文本
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text==string.Empty)
+            {
+                MessageBox.Show("文件名不能为空!");
+            }
+            else
+            {
+                if (File.Exists(textBox1.Text))
+                {
+                    MessageBox.Show("文件已存在");
+
+                }
+                else
+                {
+                    File.CreateText(textBox1.Text);
+                }
+
+            }
+
+        }
+        /// <summary>
+        /// 返回创建时间
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button8_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = Convert.ToString( File.GetCreationTime(textBox1.Text));
+        }
+        /// <summary>
+        /// 打开现有文件进行读取
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == string.Empty)
+            {
+                MessageBox.Show("文件名不能为空!");
+            }
+            else
+            {
+                if (File.Exists(textBox1.Text))
+                {
+                    File.OpenRead(textBox1.Text);
+
+                }
+                else
+                {
+                    MessageBox.Show("文件不存在");
+                }
+
+            }
+        }
+        /// <summary>
+        /// 把文件夹移动到新位置
+        ///
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text == string.Empty)
+            {
+                MessageBox.Show("文件夹名称不能为空！");
+            }
+            else
+            {
+                if (Directory.Exists(textBox2.Text))
+                {
+                    Directory.Move(textBox2.Text.Trim(),textBox4.Text.Trim());///textbox4是新建文件夹名称
+                    
+                }
+                else
+                {
+                    MessageBox.Show("文件夹不存在！");
+                }
             }
         }
     }

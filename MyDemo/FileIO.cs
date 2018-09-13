@@ -68,5 +68,21 @@ namespace MyDemo
 
 
         }
+        /// <summary>
+        /// 复制文件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == string.Empty && textBox3.Text == string.Empty)
+            {
+                MessageBox.Show("文件名不能为空！");
+            }
+            else
+            {
+                File.Copy(textBox1.Text,textBox3.Text);
+            }
+        }
     }
 }

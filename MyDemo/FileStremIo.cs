@@ -74,5 +74,70 @@ namespace MyDemo
             }
 
         }
+        /// <summary>
+        /// 写入到EXCLE
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text == string.Empty)
+            {
+                MessageBox.Show("要写入的内容为空！");
+            }
+            else
+            {
+                if (saveFileDialog1.ShowDialog()==DialogResult.OK) {
+                    int i = 0;
+                    StreamWriter aFile = null;
+                    aFile = File.CreateText("aFile .csv");
+                    //aFile.WriteLine(i.ToString() + "," + (i + 1).ToString() + "," + (i + 2));
+                    aFile.WriteLine("\"" + i.ToString() + "," + (i + 1).ToString() + "," + (i + 2) + "\"");
+                    //aFile.WriteLine("\""+i.ToString() + "," + (i + 1).ToString() +"\""+ "," + (i + 2));
+                    aFile.Close();
+                    aFile.Dispose();
+                    MessageBox.Show("end!");
+                }
+
+            }
+        }
+        /// <summary>
+        /// 读取excle
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog()==DialogResult.OK)
+            {
+                string str = null;
+
+                FileStream fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                StreamReader reader = new StreamReader(fs, System.Text.Encoding.UTF8);
+                while ((str = reader.ReadLine()) != null)
+                {
+
+
+                    // split the string
+                    //MessageBox.Show(str);
+                    string[] strs = str.Split(',');
+                    string show_str = "";
+                    for (int i = 0; i < strs.Length; i++)
+                    {
+                        if (i == strs.Length - 1)
+                        {
+                            show_str += strs[i].ToString();
+                        }
+                        else
+                        {
+                            show_str += strs[i].ToString() + ",";
+                        }
+                    }
+                    this.label1.Text = show_str;
+                }
+                reader.Close();
+
+            }
+        }
     }
 }

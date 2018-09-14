@@ -102,6 +102,12 @@
     <Compile Include="FileIO.Designer.cs">
       <DependentUpon>FileIO.cs</DependentUpon>
     </Compile>
+    <Compile Include="FileStremIo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileStremIo.Designer.cs">
+      <DependentUpon>FileStremIo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FileIO.resx">
       <DependentUpon>FileIO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileStremIo.resx">
+      <DependentUpon>FileStremIo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

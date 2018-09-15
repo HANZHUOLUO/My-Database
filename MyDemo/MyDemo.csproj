@@ -96,6 +96,12 @@
     <Compile Include="FileDemo1.Designer.cs">
       <DependentUpon>FileDemo1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FileDemo2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileDemo2.Designer.cs">
+      <DependentUpon>FileDemo2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FileInfoIO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,12 @@
     </Compile>
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GDIGraphics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GDIGraphics.Designer.cs">
+      <DependentUpon>GDIGraphics.cs</DependentUpon>
     </Compile>
     <Compile Include="GrVIEW.cs">
       <SubType>Form</SubType>
@@ -196,6 +208,9 @@
     <EmbeddedResource Include="FileDemo1.resx">
       <DependentUpon>FileDemo1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FileDemo2.resx">
+      <DependentUpon>FileDemo2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FileInfoIO.resx">
       <DependentUpon>FileInfoIO.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GDIGraphics.resx">
+      <DependentUpon>GDIGraphics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GrVIEW.resx">
       <DependentUpon>GrVIEW.cs</DependentUpon>

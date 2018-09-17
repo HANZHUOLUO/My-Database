@@ -115,5 +115,73 @@ namespace MyDemo
             Pen mypen = new Pen(Color.Black,3);
             graphics.DrawLine(mypen,150,30,150,100);
         }
+        /// <summary>
+        /// 绘制矩形
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+            Graphics graphics = this.CreateGraphics();
+            Pen pen = new Pen(Color.Black,3);
+            //调用DrawRectangle方法绘制矩形
+            graphics.DrawRectangle(pen,10,10,150,100);
+
+
+        }
+        /// <summary>
+        /// 绘制椭圆
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Graphics graphics = this.CreateGraphics();
+            Pen pen = new Pen(Color.Black,3);
+            graphics.DrawEllipse(pen,100,50,100,50);
+        }
+        /// <summary>
+        /// 绘制圆弧
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+            Graphics graphics = this.CreateGraphics();
+            Pen pen = new Pen(Color.Black,3);
+            Rectangle rectangle = new Rectangle(70,20,100,600);
+            graphics.DrawArc(pen,rectangle,220,220);
+        }
+        /// <summary>
+        /// 绘制扇形
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Graphics graphics = this.CreateGraphics();
+            Pen pen = new Pen(Color.Black,3);
+            graphics.DrawPie(pen,50,50,120,100,210,120);
+        }
+        /// <summary>
+        /// 绘制多边形
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Graphics graphics = this.CreateGraphics();
+            Pen pen = new Pen(Color.Black,3);
+            Point point1 = new Point(80, 20);
+            Point point2 = new Point(40, 50);
+            Point point3 = new Point(80, 80);
+            Point point4 = new Point(160, 80);
+            Point point5 = new Point(200, 50);
+            Point point6 = new Point(160, 20);
+            Point[] points = { point1,point2,point3,point4,point5,point6};
+            graphics.DrawPolygon(pen ,points);
+        }
     }
 }

@@ -205,6 +205,12 @@
     <Compile Include="VoteView.Designer.cs">
       <DependentUpon>VoteView.cs</DependentUpon>
     </Compile>
+    <Compile Include="WindowsPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsPrint.Designer.cs">
+      <DependentUpon>WindowsPrint.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddGridView.resx">
       <DependentUpon>AddGridView.cs</DependentUpon>
     </EmbeddedResource>
@@ -277,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VoteView.resx">
       <DependentUpon>VoteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsPrint.resx">
+      <DependentUpon>WindowsPrint.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="DataClasses1.dbml">

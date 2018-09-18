@@ -50,7 +50,7 @@ namespace MyDemo
             int width = 300, height = 300;
             //创建一个bitmp对象
             Bitmap bitmap = new Bitmap(width,height);
-            Graphics graphics = this.CreateGraphics();
+            Graphics graphics = Graphics.FromImage(bitmap);
             try
             {
                 graphics.Clear(Color.White);///使用Clear方法画布为白色
@@ -86,7 +86,7 @@ namespace MyDemo
                 graphics.DrawString("一生所爱:" + TP2.ToString() + "票", font2, brush2, new Point(150, 220));
                 graphics.DrawString("芸烨湘枫:" + TP3.ToString() + "票", font2, brush2, new Point(15, 260));
                 graphics.DrawString("情茧:" + TP4.ToString() + "票", font2, brush2, new Point(150, 260));
-                //pictureBox1.Image = bitmap;
+                pictureBox1.Image = bitmap;
             }
             catch (Exception ex)
             {

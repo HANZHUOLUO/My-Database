@@ -193,6 +193,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlHelp.cs" />
+    <Compile Include="vote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vote.Designer.cs">
+      <DependentUpon>vote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoteView.Designer.cs">
+      <DependentUpon>VoteView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddGridView.resx">
       <DependentUpon>AddGridView.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,6 +272,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="vote.resx">
+      <DependentUpon>vote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoteView.resx">
+      <DependentUpon>VoteView.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="DataClasses1.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>

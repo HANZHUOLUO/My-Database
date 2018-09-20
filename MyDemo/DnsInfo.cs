@@ -41,5 +41,8 @@ namespace MyDemo
                 textBox4.Text = Dns.GetHostByName(Dns.GetHostName()).HostName;
             }
         }
+        
+
+
     }
 }

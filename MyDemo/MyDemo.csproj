@@ -184,6 +184,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Mydatabase.dbml</DependentUpon>
     </Compile>
+    <Compile Include="OpenCom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenCom.Designer.cs">
+      <DependentUpon>OpenCom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Partial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -276,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LinqAdd.resx">
       <DependentUpon>LinqAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenCom.resx">
+      <DependentUpon>OpenCom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Partial.resx">
       <DependentUpon>Partial.cs</DependentUpon>

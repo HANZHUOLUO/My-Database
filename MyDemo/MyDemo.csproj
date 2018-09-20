@@ -84,6 +84,12 @@
     <Compile Include="DatacontrolReprt.Designer.cs">
       <DependentUpon>DatacontrolReprt.cs</DependentUpon>
     </Compile>
+    <Compile Include="DnsInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DnsInfo.Designer.cs">
+      <DependentUpon>DnsInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Family.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,12 @@
     <Compile Include="PartialDeno.Designer.cs">
       <DependentUpon>PartialDeno.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrintDemo1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintDemo1.Designer.cs">
+      <DependentUpon>PrintDemo1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlHelp.cs" />
@@ -219,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DatacontrolReprt.resx">
       <DependentUpon>DatacontrolReprt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DnsInfo.resx">
+      <DependentUpon>DnsInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Family.resx">
       <DependentUpon>Family.cs</DependentUpon>
@@ -267,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PartialDeno.resx">
       <DependentUpon>PartialDeno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintDemo1.resx">
+      <DependentUpon>PrintDemo1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

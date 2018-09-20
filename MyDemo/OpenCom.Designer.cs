@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.SuspendLayout();
             // 
             // button1
@@ -55,8 +57,9 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(136, 158);
+            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 21);
+            this.textBox2.Size = new System.Drawing.Size(100, 111);
             this.textBox2.TabIndex = 4;
             // 
             // button4
@@ -79,6 +82,11 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // serialPort1
+            // 
+            this.serialPort1.Parity = System.IO.Ports.Parity.Even;
+            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
+            // 
             // OpenCom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -91,6 +99,7 @@
             this.Controls.Add(this.button1);
             this.Name = "OpenCom";
             this.Text = "OpenCom";
+            this.Load += new System.EventHandler(this.OpenCom_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,5 +112,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.IO.Ports.SerialPort serialPort1;
     }
 }

@@ -210,6 +210,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerialPortDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerialPortDemo.Designer.cs">
+      <DependentUpon>SerialPortDemo.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlHelp.cs" />
     <Compile Include="vote.cs">
       <SubType>Form</SubType>
@@ -305,6 +311,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SerialPortDemo.resx">
+      <DependentUpon>SerialPortDemo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vote.resx">
       <DependentUpon>vote.cs</DependentUpon>
     </EmbeddedResource>

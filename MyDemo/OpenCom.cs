@@ -40,9 +40,9 @@ namespace MyDemo
         /// <param name="e"></param>
         private void button4_Click(object sender, EventArgs e)
         {
-
-            string Data = sp.ReadExisting();//读取数据
-            textBox1.Text = Data;
+      
+            sp.WriteLine(textBox1.Text);//往串口写数据
+           
         }
         /// <summary>
         /// 接收数据
@@ -51,8 +51,9 @@ namespace MyDemo
         /// <param name="e"></param>
         private void button5_Click(object sender, EventArgs e)
         {
-
-            sp.WriteLine(textBox2.Text);//往串口写数据
+            
+            string Data = sp.ReadExisting();//读取数据
+            textBox2.Text = Data;
 
         }
     }

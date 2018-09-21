@@ -60,6 +60,10 @@ namespace MyDemo
             cbxDataBits.Items.Add("8");
             //默认字符显示
             rbnChar.Checked = true;
+            ///设置状态栏
+            toolStripStatusLabel1.Text = "当前串口状态：未连接";
+            toolStripStatusLabel2.Text = "串口名称：Null";
+            toolStripStatusLabel3.Text = "波特率：Null";
 
         }
         //检测哪些串口可以使用
@@ -159,7 +163,7 @@ namespace MyDemo
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             System.Threading.Thread.Sleep(100);//延迟100ms等待收完数据
-            //this.Invoke跨线程访问ui的方法，
+            //this.Invoke跨线程访问界面的方法，
             this.Invoke((EventHandler)(delegate
             {
                 if (isHex == false)
@@ -248,6 +252,9 @@ namespace MyDemo
                     cbxStopBits.Enabled = false;
                     rbnChar.Enabled = false;
                     rbnHex.Enabled = false;
+                    toolStripStatusLabel1.Text = "当前串口状态：已连接";
+                    toolStripStatusLabel2.Text = "串口名称："+cbxComport.Text;
+                    toolStripStatusLabel3.Text = "波特率"+cbxBaudRate.Text;
                 }
                 catch (Exception)
                 {
@@ -281,6 +288,9 @@ namespace MyDemo
                     cbxStopBits.Enabled = true;
                     rbnChar.Enabled = true;
                     rbnHex.Enabled = true;
+                    toolStripStatusLabel1.Text = "当前串口状态：已关闭";
+                    toolStripStatusLabel2.Text = "串口名称：Null" ;
+                    toolStripStatusLabel3.Text = "波特率：Null";
                 }
                 catch (Exception)
                 {

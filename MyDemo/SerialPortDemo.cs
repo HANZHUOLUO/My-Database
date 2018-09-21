@@ -164,7 +164,9 @@ namespace MyDemo
             {
                 if (isHex == false)
                 {
-                    tbtRecvData.Text += sp.ReadLine();
+                    tbtRecvData.Text += sp.ReadLine();///
+                    //tbtRecvData.Text += sp.ReadChar();////
+                    //tbtRecvData.Text += sp.ReadExisting();
                 }
                 else
                 {

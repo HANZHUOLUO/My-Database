@@ -40,6 +40,17 @@ namespace MyDemo
                 textBox3.Text = Dns.GetHostName();///获取本机名称
                 textBox4.Text = Dns.GetHostByName(Dns.GetHostName()).HostName;
             }
+            label5.Text = String.Empty;
+            IPAddress[] iPs = Dns.GetHostAddresses(textBox1.Text);
+            foreach (IPAddress ips in iPs)
+            {
+                label5.Text = "网际协议地址" + ips.Address + "\nIP地址的地质族：" + ips.AddressFamily.ToString() + "\n是否IPV6连接本地地址：" + ips.IsIPv6LinkLocal;
+
+            }
+            ///实例化IPENDPoint对象
+            IPEndPoint iPEnd = new IPEndPoint(IPAddress.Parse(textBox1.Text),80);
+            //使用IPENDPOINT类对象获取终点的IP地址和端口号
+            label6.Text = "IP地址： " + iPEnd.Address.ToString() + "\n 端口号：" + iPEnd.Port;
         }
         
 

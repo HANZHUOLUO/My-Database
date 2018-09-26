@@ -70,5 +70,83 @@ namespace MyDemo
             }
 
         }
+        /// <summary>
+        /// 删除注册表信息
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //创建RegistryKey实例
+                RegistryKey registry = Registry.LocalMachine;
+                //使用OpenSubKey方法打开HKEY_LOCAL_MACHINE/SOFTWARE键
+                RegistryKey key = registry.OpenSubKey("HARDWARE", true);
+                //打开LS子键
+                RegistryKey key2 = key.OpenSubKey("LS", true);
+                ///使用DeleteSubKey方法删除名称为SHJ的子键
+                key2.DeleteSubKey("SHJ",false);
+                MessageBox.Show("删除成功！");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        /// <summary>
+        /// 删除注册表所有信息
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //创建RegistryKey实例
+                RegistryKey registry = Registry.LocalMachine;
+                //使用OpenSubKey方法打开HKEY_LOCAL_MACHINE/SOFTWARE键
+                RegistryKey key = registry.OpenSubKey("HARDWARE", true);
+                //打开LS子键
+                RegistryKey key2 = key.OpenSubKey("LS", true);
+                ///使用DeleteSubKey方法删除名称为SHJ的子键
+                key2.DeleteSubKeyTree("SHJ");
+                MessageBox.Show("删除成功！");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        /// <summary>
+        /// 删除注册表指定键的值
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //创建RegistryKey实例
+                RegistryKey registry = Registry.LocalMachine;
+                //使用OpenSubKey方法打开HKEY_LOCAL_MACHINE/SOFTWARE键
+                RegistryKey key = registry.OpenSubKey("HARDWARE", true);
+                //打开LS子键
+                RegistryKey key2 = key.OpenSubKey("LS", true);
+                ///打开SHJ子键
+                RegistryKey key3 = key2.OpenSubKey("SHJ",true);
+                ///使用DeleteSubKey方法删除名称为VALUE的子键
+                key3.DeleteValue("value");
+                MessageBox.Show("删除键值成功！");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
+
+
 }

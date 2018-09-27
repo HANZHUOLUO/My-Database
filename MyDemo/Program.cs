@@ -18,11 +18,10 @@ namespace MyDemo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            Application.Run(new CreateRegedit());
+            Application.Run(new ThreadDemo());
         }
     }
 }

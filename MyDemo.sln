@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfence", "Interfence\In
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MyDemoEXE", "MyDemoEXE\MyDemoEXE.vdproj", "{AF5DDE77-8633-4DF5-8756-8996271B06F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadCreate", "ThreadCreate\ThreadCreate.csproj", "{FF5FA5AC-2CF8-4C8C-8365-032390ADF123}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{2521C81D-2C0B-4459-A609-1B5D5ED15AE9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AF5DDE77-8633-4DF5-8756-8996271B06F1}.Debug|Any CPU.ActiveCfg = Debug
 		{AF5DDE77-8633-4DF5-8756-8996271B06F1}.Release|Any CPU.ActiveCfg = Release
+		{FF5FA5AC-2CF8-4C8C-8365-032390ADF123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF5FA5AC-2CF8-4C8C-8365-032390ADF123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF5FA5AC-2CF8-4C8C-8365-032390ADF123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF5FA5AC-2CF8-4C8C-8365-032390ADF123}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

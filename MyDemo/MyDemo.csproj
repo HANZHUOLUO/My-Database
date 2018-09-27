@@ -232,6 +232,12 @@
       <DependentUpon>SerialPortDemo.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlHelp.cs" />
+    <Compile Include="ThreadDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThreadDemo.Designer.cs">
+      <DependentUpon>ThreadDemo.cs</DependentUpon>
+    </Compile>
     <Compile Include="vote.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -335,6 +341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SerialPortDemo.resx">
       <DependentUpon>SerialPortDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThreadDemo.resx">
+      <DependentUpon>ThreadDemo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vote.resx">
       <DependentUpon>vote.cs</DependentUpon>

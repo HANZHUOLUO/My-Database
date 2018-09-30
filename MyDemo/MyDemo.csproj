@@ -15,7 +15,7 @@
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -51,6 +51,17 @@
     <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Kingdee.BOS.DeskClient.WinService.Contract">
+      <HintPath>C:\Program Files (x86)\Kingdee\K3Cloud\DeskClient\Kingdee.BOS.DeskClient.WinService.Contract.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Kingdee.BOS.DeskClient.WinService.Core">
+      <HintPath>C:\Program Files (x86)\Kingdee\K3Cloud\DeskClient\Kingdee.BOS.DeskClient.WinService.Core.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Kingdee.K3.ClientRunTime">
+      <HintPath>E:\Program Files (x86)\Kingdee\K3ERP\K3NetClient\Kingdee.K3.ClientRunTime.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -256,6 +267,12 @@
     <Compile Include="WindowsPrint.Designer.cs">
       <DependentUpon>WindowsPrint.cs</DependentUpon>
     </Compile>
+    <Compile Include="调用K3登录界面.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="调用K3登录界面.Designer.cs">
+      <DependentUpon>调用K3登录界面.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddGridView.resx">
       <DependentUpon>AddGridView.cs</DependentUpon>
     </EmbeddedResource>
@@ -354,6 +371,9 @@
     <EmbeddedResource Include="WindowsPrint.resx">
       <DependentUpon>WindowsPrint.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="调用K3登录界面.resx">
+      <DependentUpon>调用K3登录界面.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="DataClasses1.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
@@ -391,6 +411,26 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="K3CloudDeskAppActiveXLib">
+      <Guid>{D0BBAF71-95B0-41A2-9071-BB39C83918A9}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="k3Login">
+      <Guid>{DF172D4A-57B6-4922-BE3E-A9B48D333384}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

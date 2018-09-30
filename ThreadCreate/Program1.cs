@@ -22,7 +22,7 @@ namespace ThreadCreate
             Thread thread2 = new Thread(new ThreadStart(Thread2));//创建线程二
             thread1.Start();
             thread2.Start();
-            Program1 program = new Program1();///实例化类对象
+            //Program1 program = new Program1();///实例化类对象
            
             Console.ReadLine();
         }
@@ -38,11 +38,11 @@ namespace ThreadCreate
         {
             Console.WriteLine("线程二");
         }
-        public static void LockThead()
-        {
-            lock (this) {
-                Console.WriteLine("锁定线程以实现线程同步");
-            }
-        }
+        //public static void LockThead()
+        //{
+        //    lock (this) {
+        //        Console.WriteLine("锁定线程以实现线程同步");
+        //    }
+        //}
     }
 }

@@ -21,7 +21,7 @@ namespace MyDemo
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            Application.Run(new ThreadDemo());
+            Application.Run(new 调用K3登录界面());
         }
     }
 }

@@ -14,6 +14,7 @@ namespace ThreadMonitor
             program.LockThread();//lock方法
             program.LockThread1();///Monitor方法
             program.LockThread2();//Mutex方法
+            program.Show();
             Console.ReadLine();
         }
         public  void LockThread()
@@ -38,6 +39,12 @@ namespace ThreadMonitor
             Console.WriteLine("锁定线程以实现线程同步！");
             mutex.ReleaseMutex(); ///释放mutex对象
 
+        }
+        public void Show()
+        {
+            string a = "0";
+            string b = string.Format("编号:{0}",a);
+            Console.Write("输出：{0}",b);
         }
     }
 }
